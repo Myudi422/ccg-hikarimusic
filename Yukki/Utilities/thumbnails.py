@@ -35,20 +35,16 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     font = ImageFont.truetype("Utils/Aileron-Bold.otf", 40)
     font2 = ImageFont.truetype("Utils/Aileron-Bold.otf", 30)
     draw.text(
-        (100, 180),
+        (120, 250),
         f"Sedang Diputar..",
         fill="white",
-        stroke_width=1,
-        stroke_fill="white",
         font=font2,
     )
     # reso asli - 25, 595
     draw.text(
-        (120, 200),
+        (120, 280),
         f"{title[:30]}...",
         fill="white",
-        stroke_width=2,
-        stroke_fill="white",
         font=font,
     )
     img.save(f"cache/final{userid}.png")
