@@ -36,7 +36,7 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     font2 = ImageFont.truetype("Utils/Aileron-Bold.otf", 30)
     draw.text(
         (100, 310),
-        f"Sedang Memainkan:",
+        f"{ctitle}",
         fill="white",
         font=font2,
     )
