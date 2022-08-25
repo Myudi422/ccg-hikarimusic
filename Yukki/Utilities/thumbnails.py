@@ -32,11 +32,11 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     Image.alpha_composite(image5, image6).save(f"cache/temp{userid}.png")
     img = Image.open(f"cache/temp{userid}.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("Utils/Aileron-Bold.otf", 40)
+    font = ImageFont.truetype("Utils/finalfont.ttf", 40)
     font2 = ImageFont.truetype("Utils/Aileron-Bold.otf", 30)
     draw.text(
         (100, 310),
-        f"Sedang Memainkan...",
+        f"Sedang Memainkan:",
         fill="white",
         font=font2,
     )
