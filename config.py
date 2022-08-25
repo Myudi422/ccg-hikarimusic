@@ -11,8 +11,8 @@ load_dotenv()
 # After, you are logged in click on API Development Tools.
 # Enter Anything as App name and App short name, Enter my.telegram.org in url section
 # That’s it, You”ll get your API_ID and API_HASH
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "7797142"))
+API_HASH = getenv("API_HASH", "d3b04868e54c17687f2391f6acc36742")
 
 # Assistant Prefix needed to trigger your assistant accounts in User mode to execute your command. This can be only set as one Symbol (Special Character)
 # Example:- . or , or ! or * etc etc
@@ -23,11 +23,11 @@ ASSISTANT_PREFIX = list(getenv("ASSISTANT_PREFIX", ".").split())
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "10"))
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "5759132205:AAGP5PrzN2ysWTmIupVHKl7OyUrAU68C05s")
 
 ## MONGO DB
 # HOW TO GEN :-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://root:aaaaaaac@anibot.m2eh1.mongodb.net/?retryWrites=true&w=majority")
 
 
 ## PRIVATE START MESSAGE.. IMAGE
@@ -44,7 +44,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Also without customizing or modifying as your own choice, this must be
 # filled with Yukki Music Bot Main Repository URL in value.
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO", "https://github.com/Rexashh/yukkixa"
+    "UPSTREAM_REPO", "https://github.com/Myudi422/ccg-hikarimusic"
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -71,11 +71,10 @@ else:
 
 # Remember to add your Music Bot , Assistant Accounts and Logger Id in Group and Promote them Admin with Full Rights.
 
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
-
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001559315851"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "ccgnimex")
 
 ## Bot SUDO USERS AND DEVS
 
@@ -85,7 +84,7 @@ SUDO_USERS = list(map(int, getenv("SUDO_USERS", "").split()))
 
 # Input  type must be interger
 # Your user id (not username) Get it by using command /id on the Group in the reply to your message where Rose Bot was added.
-OWNER_ID = list(map(int, getenv("OWNER_ID", "").split())) + [5003514838]
+OWNER_ID = list(map(int, getenv("OWNER_ID", "").split())) + [784985038]
 
 ## String Session Vars ...
 # You'll need a Pyrogram String Session for these vars.
@@ -98,7 +97,7 @@ OWNER_ID = list(map(int, getenv("OWNER_ID", "").split())) + [5003514838]
 if str(getenv("STRING_SESSION1")).strip() == "":
     STRING1 = str(None)
 else:
-    STRING1 = str(getenv("STRING_SESSION1"))
+    STRING1 = getenv("STRING_SESSION", "BQArp_bOMXMf9sTmeapykMLDtnze_DMh5Xb-tPtCeYbvIviNd-_Zf923vza4gApZR219zajDpoVSCEyAw4bMbuMmQND8ozUgxz2jlviNJUrV6jPIDdQ1Ba3zTwWaEEVdnBRO1tSVKxOZzBRCIQHgdqJGKxZUXYRYCDO-bjSZwwSIgnHjtvuHeg4_GvB88esHVGOEq7u_8HeGO98v-FrVbCPyV9vcTKD_tqgwF51r-4L66Fr_aFp9_rv7r1TVkDQDGREcX8lUA1PcR29G2Q7RTEyeEw_R9hnFv_y5-Q3DYe4gOLZRGYPA5AXX5ZXbfiaiSwXHZ-BkvfEXgmKILF-DQ5YoAAAAAGk1_H0A")
 
 if str(getenv("STRING_SESSION2")).strip() == "":
     STRING2 = str(None)
