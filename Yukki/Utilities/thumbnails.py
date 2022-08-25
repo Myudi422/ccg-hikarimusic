@@ -25,6 +25,16 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
                 await f.close()
     image1 = Image.open(f"cache/thumb{userid}.jpg")
     image2 = Image.open(f"Utils/{theme}.PNG")
+    youtube = Image.open(f"cache/thumb{userid}.jpg")
+    Xcenter = youtube.width / 2
+    Ycenter = youtube.height / 2
+    x1 = Xcenter - 250
+    y1 = Ycenter - 250
+    x2 = Xcenter + 250
+    y2 = Ycenter + 250
+    logo = youtube.crop((x1, y1, x2, y2))
+    logo.thumbnail((520, 520), Image.ANTIALIAS)
+    logo = ImageOps.expand(logo, border=15, fill="white")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
