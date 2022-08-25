@@ -232,11 +232,11 @@ async def Music_Stream(_, CallbackQuery):
             f"**Batas Durasi Terlampaui**\n\n**Durasi yang Diizinkan: **{DURATION_LIMIT_MIN} menit(s)\n**Durasi yang Diterima:** {duration_min} menit(s)"
         )
     await CallbackQuery.answer(f"Processing:- {title[:20]}", show_alert=True)
-    #mystic = await CallbackQuery.message.reply_text(
-    #    f"**{MUSIC_BOT_NAME} Downloader**\n\n**Judul:** {title[:50]}\n\n0% ▓▓▓▓▓▓▓▓▓▓▓▓ 100%"
-    #)
+    mystic = await CallbackQuery.message.reply_text(
+        f""
+    )
     downloaded_file = await loop.run_in_executor(
-        None, download, videoid, title
+        None, download, videoid, mystic, title
     )
     raw_path = await convert(downloaded_file)
     theme = await check_theme(chat_id)
@@ -252,6 +252,7 @@ async def Music_Stream(_, CallbackQuery):
         title,
         duration_min,
         duration_sec,
+        mystic,
     )
 
 
